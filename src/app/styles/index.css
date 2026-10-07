@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+/*
+  Дизайн-токены из Figma. Используются как обычные классы Tailwind:
+  bg-primary, text-accent, font-work-sans и т.д.
+  Если в своей секции нашёл новый общий цвет — добавь его сюда, а не хардкодь.
+*/
+@theme {
+  --color-primary: #013a4c;
+  --color-accent: #ffd063;
+  --color-white: #ffffff;
+
+  --font-roboto: 'Roboto', sans-serif;
+  --font-work-sans: 'Work Sans', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-roboto text-primary bg-white antialiased;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+}
